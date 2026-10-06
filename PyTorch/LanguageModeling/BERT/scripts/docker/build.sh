@@ -9,6 +9,7 @@ docker build \
   --rm \
   --pull \
   --no-cache \
+  --build-arg FROM_IMAGE_NAME="${FROM_IMAGE_NAME:-nvcr.io/nvidia/pytorch:21.11-py3}" \
   -t ${URL} \
   .
 

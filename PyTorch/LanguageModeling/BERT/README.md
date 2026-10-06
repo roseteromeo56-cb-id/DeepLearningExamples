@@ -258,6 +258,10 @@ Find all trained and available checkpoints in the table below:
 ```
 bash scripts/docker/build.sh
 ```
+The build uses the PyTorch 21.11-py3 NGC image by default. To use another PyTorch NGC image, set `FROM_IMAGE_NAME` when building (replace `YY.MM` with the desired release):
+```
+FROM_IMAGE_NAME=nvcr.io/nvidia/pytorch:YY.MM-py3 bash scripts/docker/build.sh
+```
  
 4. Start an interactive session in the NGC container to run training/inference.
 ```
@@ -923,6 +927,5 @@ July 2019
 ### Known issues
  
 There are no known issues with this model.
-
 
 
