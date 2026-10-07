@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_DIR=$(cd "$(dirname $0)"; pwd)
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd) || exit
 : ${JASPER_REPO:="$SCRIPT_DIR/../.."}
 
 : ${DATA_DIR:=${1:-"$JASPER_REPO/datasets"}}
