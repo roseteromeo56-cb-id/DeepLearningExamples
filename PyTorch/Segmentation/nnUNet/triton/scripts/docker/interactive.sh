@@ -19,8 +19,8 @@ docker run -it --rm \
     --ulimit memlock=-1 \
     --ulimit stack=67108864 \
     -e WORKDIR="$(pwd)" \
-    -e PYTHONPATH=$(pwd) \
-    -v $(pwd):$(pwd) \
+    -e PYTHONPATH="$(pwd)" \
+    -v "$(pwd):$(pwd)" \
     -v /mnt/nvdl/usr/jzarzycki/nnunet_pyt/results:/data \
     -v /mnt/nvdl/usr/jzarzycki/nnunet_pyt/results:/results \
     -w "$(pwd)" \
