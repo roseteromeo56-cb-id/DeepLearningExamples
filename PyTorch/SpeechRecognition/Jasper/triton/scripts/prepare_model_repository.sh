@@ -16,7 +16,7 @@
 
 # Create folder deploy/model_repo that will be used by TRITON
 
-SCRIPT_DIR=$(cd $(dirname $0); pwd)
+SCRIPT_DIR=$(cd "$(dirname $0)"; pwd)
 PROJECT_DIR=${SCRIPT_DIR}/..
 DEPLOY_DIR=${PROJECT_DIR}/deploy
 HOST_REPO=${DEPLOY_DIR}/model_repo
