@@ -58,7 +58,7 @@ echo ----------- Preprocessing dataset -----------
 
 for part in test-clean test-other; do
   # use underscore-separated names in data directories.
-  local/data_prep.sh $data/$model/$part $datasets/$model/$(echo $part | sed s/-/_/g)
+  local/data_prep.sh $data/$model/$part $datasets/$model/"$(echo $part | sed s/-/_/g)"
   # convert the manifests
   pushd $datasets/$model/"$(echo $part | sed s/-/_/g)"
   #sed -i 's@workspace@'"${WORKSPACE}"'@' wav.scp
